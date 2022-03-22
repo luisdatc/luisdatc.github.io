@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase5</title>
+</head>
+<body>
+    <h1>CREAR CUENTA</h1>
+    <fieldset>
+        <legend>
+            Informaci&oacute;n Personal
+        </legend>
+        <form>
+            <label>Nombre *</label>
+            <input type="text" name="nombre"placeholder="Nombre">
+            <label>Apellido *</label>
+            <input type="text" name="apellido" placeholder="Apellido">
+            <br>
+            <label>Direccion de Email *</label>
+            <input type="text" name="Direccion" placeholder="Mail@mail.com">
+            <br> 
+            <label>Nro de Documento *</label>
+            <input type="text" name="documento" placeholder="xxxxxxxx">
+            <br>
+            <!--solo numero-->
+            <label>Edad *</label>
+            <input type="number"min="0" max="2">
+            <br>
+            <label>Adherirte al boletin de Novedades</label>
+            <input type="checkbox" name="th" value="Si" checked>
+            <br>
+
+            <label>Casado:</label>
+            <span>Si</span>
+            <input type="radio" name="casado" value="Si">
+            <span>No</span>
+            <input type="radio" name="casado" value="No">
+            <br>
+
+            <label>Cantidad:</label>
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <input type="submit" value="Enviar">
+        </form>
+    </fieldset>
+
+    <fieldset>
+        <legend>Form con Tabla</legend>
+        <form action="../clase4/index.html" method="POST">
+            <table>
+                <tr>
+                    <td>
+                        <label>Nombre *</label>
+                        <br>
+                        <input type="text" name="nombre" maxlength="50">
+                    </td>
+                    <td>
+                        <label>Apellido *</label>
+                        <br>
+                        <input type="text" name="apellido" placeholder="Apellido">
+                     <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label>Direccion de Email *</label>
+                        <br>
+                        <input type="text" name="Direccion" placeholder="Mail@mail.com">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Nro de Documento *</label>
+                        <br>
+                        <input type="text" name="dni" placeholder="xxxxxxxx" min="0" max="99999999">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Guardar">
+                    </td>
+                </tr>
+
+        
+            </table>
+        </form>
+
+
+
+
+    </fieldset>
+
+
+</body>
+</html>
