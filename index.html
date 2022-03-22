@@ -4,65 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receta para Hacer Galletas</title>
-    <link rel="stylesheet" href="receta.css">
+    <title>Clase5</title>
 </head>
 <body>
-    <h1 align="center">Como hacer Galletas muy FACIL!!!</style></h1>
-    <div></div>
-    <p>En este momento te vamos a ensenar a como hacer las galletas de chocolates mas delicios que has probado!!!!!</p>
+    <h1>CREAR CUENTA</h1>
+    <fieldset>
+        <legend>
+            Informaci&oacute;n Personal
+        </legend>
+        <form>
+            <label>Nombre *</label>
+            <input type="text" name="nombre"placeholder="Nombre">
+            <label>Apellido *</label>
+            <input type="text" name="apellido" placeholder="Apellido">
+            <br>
+            <label>Direccion de Email *</label>
+            <input type="text" name="Direccion" placeholder="Mail@mail.com">
+            <br> 
+            <label>Nro de Documento *</label>
+            <input type="text" name="documento" placeholder="xxxxxxxx">
+            <br>
+            <!--solo numero-->
+            <label>Edad *</label>
+            <input type="number"min="0" max="2">
+            <br>
+            <label>Adherirte al boletin de Novedades</label>
+            <input type="checkbox" name="th" value="Si" checked>
+            <br>
 
-    <h3>INGREDIENTES</h3>
+            <label>Casado:</label>
+            <span>Si</span>
+            <input type="radio" name="casado" value="Si">
+            <span>No</span>
+            <input type="radio" name="casado" value="No">
+            <br>
 
-    <ul>
-        <li>250 gramos de harina de trigo de todo uso.</li>
-        <li>85 gramos de mantequilla.</li>
-        <li>150 gramos de azucar.</li>
-        <li>1 huevo mediano.</li>
-        <li>1/2 cucharadita de levadura quimica en polvo (4 gramos).</li>
-        <li>1 cucharadita de esencia de vainilla (3ml).</li>
-        <li>100 gramos de chocolate 70% cacao</li>
-    </ul>
-    <hr>
-    <h2>Preparacion de las galletas de chocolate crujientes:</h2>
-    <div></div>
-    <ol> 
-        <li>Ponemos la mantequilla en un bol y la derretimos unos segundos en el microondas. 
-            En menos de un minuto, ya vemos que comienza a derretirse. Mezclamos la mantequilla 
-            con el azucar en un bol y comenzamos a batir hasta conseguir una crema uniforme.
-        </li>
-        <div></div>
-        <br>
-        <li>Agregamos el huevo y la esencia de vainilla a la mezcla y seguimos batiendo hasta que se integren. 
-            En otro bol mezclamos la harina con la levadura y la añadimos a la mezcla de huevo, mantequilla y azucar.
-            Con un cuchillo troceamos el chocolate en dados irregulares y los incorporamos a la mezcla anterior.
-        </li>
-        <br>
-        <li>Con la ayuda de un tenedor comenzamos a integrar los ingredientes secos con los liquidos 
-            Cuando tengamos una especie de arena comenzamos a compactarlos con las manos hasta formar una bola.
-            Cogemos pequeñas porciones, de unos 30 gramos y formamos una bola con las manos.
-        </li>
-        <div></div>
-        <br>
-        <li>Achatamos la bolita y la colocamos sobre papel de horno o parafinado en una fuente de horno. Vamos haciendo lo 
-            mismo con el  resto de la masa.
-        </li>
-    </ol>
+            <label>Cantidad:</label>
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <input type="submit" value="Enviar">
+        </form>
+    </fieldset>
 
-    <!--COLOCAR ACA LAS FOTOS DE LA PREPARACION -->
+    <fieldset>
+        <legend>Form con Tabla</legend>
+        <form action="../clase4/index.html" method="POST">
+            <table>
+                <tr>
+                    <td>
+                        <label>Nombre *</label>
+                        <br>
+                        <input type="text" name="nombre" maxlength="50">
+                    </td>
+                    <td>
+                        <label>Apellido *</label>
+                        <br>
+                        <input type="text" name="apellido" placeholder="Apellido">
+                     <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label>Direccion de Email *</label>
+                        <br>
+                        <input type="text" name="Direccion" placeholder="Mail@mail.com">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Nro de Documento *</label>
+                        <br>
+                        <input type="text" name="dni" placeholder="xxxxxxxx" min="0" max="99999999">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Guardar">
+                    </td>
+                </tr>
+
+        
+            </table>
+        </form>
 
 
-    <h2>Horneado y presentacion final de las galletas de chocolate:</h2>
 
-    <ol>
-        <li>Debemos colocar las porciones ligeramente separadas en la bandeja que vamos a poner en la posicion
-            central del horno, que creceran durante el horneado. Las galletas no se quedaran pegadas, podremos retirarla, una 
-            vez horneadas, sin problema del papel de horno o bandeja.
-        </li>
-        <li>Con el horno previamente caliente a 180ºC, horneamos las galletas. Siempre con calor arriba y abajo y con la opcionde ventilador,
-            durante unos 15minutos, hasta que vemos que estan doraditas. Retiramos las galletas a una rejilla y dejamos que se enfrien antes de consumirlas. 
-            Podemos disfrutar de un dulce casero perfecto para el desayuno.
-        </li>
-    </ol>
+
+    </fieldset>
+
+
 </body>
 </html>
