@@ -1,0 +1,45 @@
+  /*pseudo clases*/
+        /*visited*/
+        a:visited {
+            color: aquamarine;
+        }
+
+        /*pasar el mouse por arriba*/
+        a:hover {
+            color:blueviolet;
+            font-size: 18px;
+            text-decoration: line-through;
+        }
+        /*active*/
+        a:active {
+            color:green;
+            text-transform: uppercase;
+        }
+
+        /*nth-child(n)*/
+        div p:nth-child(1) {
+            color: green;
+            font-size: 2em;
+        }
+
+        div p:nth-child(odd) {
+            color: chartreuse;
+        }
+
+        /*table*/
+        table {
+            border: 1px solid red;
+        }
+
+        /*rodrigo */
+        table tr:nth-child(even) {
+            color:red
+        }
+        table tr:nth-child(odd) {
+            background-color:aqua
+        }
+
+        /*
+            especificidad
+            !important
+        */
