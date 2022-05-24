@@ -105,7 +105,7 @@
 
         footer ul li a {
             vertical-align: middle;
-            margin: 0 25px;
+            margin: 0 55px;
         }
 
         .navcla {
@@ -133,24 +133,18 @@
             border: none;
             margin-right: 15px;
         }
+        /*
+        .con{
+           background-color: #0008 !important;
+           background-image: url(imagenes/ba1.jpg);
+           height:1000px;
+           filter: brightness(50%);
+        }
+        */
 
         .foto2{
             filter: brightness(50%);
         }
-
-        .fotohonolulu{
-            max-width: 100%;
-        }
-
-        textarea{
-            height: 100px;          
-        }
-
-        .botontransparente:hover{
-            background-color: white !important;
-            color: black !important;
-        }
-
     </style>
 </head>
 <body>
@@ -278,10 +272,10 @@
         <br />
     </main>
 
-    <div class="card card-a container fotohonolulu">
+    <div class="card card-a container" style="max-width: 100%">
         <div class="row">
             <div class="col foto">
-              <img src="imagenes/honolulu.jpg" class="img-fluid"  alt="..." />
+              <img src="imagenes/honolulu.jpg" class="img-fluid" style="max-width: 100%" alt="..." />
             </div>
             <div class="col coldos">
                 <div class="card-body-dos">
@@ -321,7 +315,8 @@
             <br><br>
             <div class="form-floating">
                 <div class="col">
-                    <textarea placeholder="Sobre que quieres Hablar?" class="form-control" id="floatingTextarea2"></textarea>
+                    <textarea placeholder="Sobre que quieres Hablar?" class="form-control" id="floatingTextarea2"
+                      style="height: 100px"></textarea>
                     <div id="emailHelp" class="form-text">
                       Recuerda incluir un titulo para tu charla.
                     </div>

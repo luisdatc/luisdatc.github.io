@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+
+<style>
+       
+    .nav-link {
+        color: grey; font-weight: 400; font-size: medium;
+    }
+    #linkactivo {
+        color: rgb(14, 190, 14); font-weight: 400;
+    }
+    .navbar-brand {
+        padding-left: 80px; font-size: x-large;
+    }
+    #linkSeleccionado {
+        color: rgb(255, 255, 255); font-weight: 400; font-size: medium;
+    }
+    h6 {
+        text-align: justify; font-weight: 700;
+    }
+    .card-title {
+        text-align: center;
+    }
+    .card-text {
+        text-align: center
+    }
+    .card {
+        border-color: rgb(0, 85, 196); border-radius: 0%; border-width: 2px ; padding-top: 10%; padding-bottom: 10%; padding-left: 0%; padding-right: 0%;
+    }
+    .col {
+        padding: 3px;
+    }
+    #totalAPagar {
+        background-color: rgba(144, 217, 240, 0.856);
+    }
+    #totalAPagar::placeholder { color: rgb(51, 117, 161);
+    }
+    .btn {
+        background-color: rgb(135, 201, 37); border-color: rgb(135, 201, 37)
+    }
+    .venta {
+        text-align: center; color: rgb(56, 53, 53); font-size: medium;
+    }
+    .venta p {
+        text-align: center; color: rgb(56, 53, 53); font-weight: 400; font-size: smaller;
+    }
+    #pie {
+        color: white; font-weight: 400;
+    }
+</style>
+<body>
+
+    <header class="navbar navbar-dark justify-content-end" style="background-color: rgb(63, 62, 62); z-index: 1;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            Conf Bs As
+          </a>
+            
+          <ul class="nav" style="padding-right: 80px;">
+            <li class="nav-item">
+              <a href="#LaConferencia" class="nav-link">La conferencia</a>
+            </li>
+            <li class="nav-item">
+              <a href="#Oradores" class="nav-link">Los oradores</a>
+            </li>
+            <li class="nav-item">
+              <a href="#LugarYFecha" class="nav-link">El lugar y la fecha</a>
+            </li>
+            <li class="nav-item">
+              <a href="#ConvierteteOrador" class="nav-link active" id="linkSeleccionado" aria-current="page">Conviértete en orador</a>
+            </li>
+            <li class="nav-item">
+              <a href="#ComprarTickets" class="nav-link active" id="linkactivo" aria-current="page">Comprar tickets</a>
+            </li>
+          </ul>
+        </div>
+    </header>
+
+
+    <section>
+        <div class="container container-fluid">
+            <div class="row justify-content-center">
+                <div class="col col-3">
+                    <div class="card">
+                        <h5 class="card-title">Estudiante</h5>
+                        <p class="card-text">Tienen un descuento</p>
+                        <h6 class="card-text">80%</h6>
+                        <p class="card-text"><small class="text-muted">* presentar documentación</small></p>
+                    </div>
+                </div>
+                <div class="col col-3">
+                    <div class="card" style="border-color: rgb(1, 131, 1);">
+                        <h5 class="card-title">Trainee</h5>
+                        <p class="card-text">Tienen un descuento</p>
+                        <h6 class="card-text">50%</h6>
+                        <p class="card-text"><small class="text-muted">* presentar documentación</small></p>
+                    </div>
+                </div>
+                <div class="col col-3">
+                    <div class="card" style="border-color: rgb(248, 225, 18);">
+                        <h5 class="card-title">Junior</h5>
+                        <p class="card-text">Tienen un descuento</p>
+                        <h6 class="card-text">15%</h6>
+                        <p class="card-text"><small class="text-muted">* presentar documentación</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<br>
+    <section>
+        <div class="venta">
+            <p id="sinmargin">VENTA</p>
+            <h2>VALOR DE TICKET $200</h2>
+        </div>
+<br>
+        <div class="row container-fluid justify-content-center">
+            <div class= "col-sm-4" style="padding-right: 5px;">
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
+            </div>
+            <div class="col-sm-4" style="padding-left: 5px;">
+                <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+            </div>
+            <br>
+            <br>
+            <div class="row col-sm-8 container-fluid justify-content-center">
+                <input type="email" class="form-control" placeholder="Correo" style="margin-top: 3%"></input>
+            </div>
+            
+            <div class="row container-fluid justify-content-center">
+                <div class= "col-sm-4" style="padding-left: 0px; padding-right: 5px;">
+                    <label for="cantidad" class="form-label" style="margin-top: 5%; padding: 0px;">Cantidad</label>
+                    <input type="number" class="form-control" id="cantidad" placeholder="Cantidad">
+                </div>
+                <div class="col-sm-4" style="padding-right: 0px; padding-left: 5px;">
+                    <label for="form-select" class="form-label"  style="margin-top: 5%; padding: 0px;">Categoría</label>
+                        <select class= "form-select" id="precio">
+                            <option selected value="estudiante">Estudiante</option>
+                            <option value="trainee">Trainee</option>
+                            <option value="junior">Junior</option>
+                        </select>    
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    
+    <div id="totalAPagar"></div>
+    <br>
+
+    <div class="row container-fluid justify-content-center">
+        <div class="d-grid gap-2 col-4" style="padding-left: 0px; padding-right: 5px;">
+            <button class="btn btn-primary" type="button" id="botonBorrar">Borrar</button>
+        </div>
+        <div class="d-grid gap-2 col-4" style="padding-right: 0px; padding-left: 5px;">
+            <button class="btn btn-primary" type="button" id="botonResumen">Resumen</button>
+        </div>
+    </div> 
+<br>
+    </section>
+
+    <footer>
+        <ul class="nav navbar-dark justify-content-center" style="background-color: rgb(10, 71, 100); padding: 40px;">
+        <li class="nav-item px-4">
+            <a class="nav-link" id="pie" style="text-align: center;"href="#">Preguntas <br>frecuentes</a>
+        </li>
+        <li class="nav-item px-4">
+            <a class="nav-link" id="pie" href="#">Contáctanos</a>
+        </li>
+        <li class="nav-item px-4">
+            <a class="nav-link" id="pie" href="#">Prensa</a>
+        </li>
+        <li class="nav-item px-4">
+            <a class="nav-link" id="pie" href="#">Conferencias</a>
+        </li>
+        <li class="nav-item px-4"> 
+            <a class="nav-link" id="pie" style="text-align: center;" href="#">Términos y <br>condiciones</a>
+        </li>
+        <li class="nav-item px-4">
+            <a class="nav-link" id="pie" href="#">Privacidad</a>
+        </li>
+        <li class="nav-item px-4">
+            <a class="nav-link" id="pie" href="#">Estudiantes</a>
+        </li>
+        </ul>
+    </footer>
+
+
+</body>
+
+  <script src="scripjordan.js"></script>
+</html>
