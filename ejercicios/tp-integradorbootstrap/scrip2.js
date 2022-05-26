@@ -11,51 +11,48 @@ function get(id) {
     return document.getElementById(id);
 };
 
+function limpiar(){
+    document.getElementById('entradas').reset;
+}
+
+const btnBorrar = document.getElementById('btnBorrar');
+
+btnBorrar.addEventListener('click', (){
+    limpiar();
+});
+
+
+
+
+
 //capturar cantidad de entradas
-let cantidadTicket = get('cantidadTickets').value;
+var cantidadTicket = parseInt(get('cantidadTickets').value);
 
 //capturo categoria de persona
-let categoriaPersona = get('categoria').value;
+var categoriaPersona = get('categoria').value;
 
+let end;
 function precioEntEstu (precioEstudiante, cantidadTicket) {
-    precioEstudiante * cantidadTicket;
+    let end = Number(precioEstudiante * 5);
+    return end;
 };
 
-console.log(precioEntEstu)
+console.log(end)
 
 function precioEnttrai (precioTrainee, cantidadTicket) {
     precioTrainee * cantidadTicket;
 };
 
 function precioEntJun (precioJunior, cantidadTicket) {
-    precioJunior * cantidadTicket;
+    end = parseInt(precioJunior * cantidadTicket);
+    return end
 };
 
-/*let operacion;
-function calcular(){
-
-    if(categoriaPersona === '0'){
-        precioEntEstu;
-    }else if(categoriaPersona === '1'){
-        precioEntTrai;
-    }else{ 
-        (categoriaPersona === '2')
-        precioEntJun;
-    }
-    return operacion     
-}
-
-console.log(operacion);
-*/
 function esValido(cantidadTicket) {
     return cantidadTicket !== '';
 }
     
 
-//btnResumen.addEventListener('click', function(e){
-//e.preventDefault();
-
-//calcular();
 
 
 function calcular(operacion){
@@ -78,3 +75,9 @@ function calcular(operacion){
 }
 }
 
+// capturar la captidad
+// volver la string de cntidad a number 
+//capturar la categoria
+//hacer las funciones que multipliquen la cantidad por categoria (estduainte, trainee, junior).
+// hacer funcion de case por categoria
+//hacer evento de boton resumen  
