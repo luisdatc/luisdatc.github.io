@@ -17,10 +17,11 @@ let cantidadTicket = get('cantidadTickets').value;
 //capturo categoria de persona
 let categoriaPersona = get('categoria').value;
 
-
 function precioEntEstu (precioEstudiante, cantidadTicket) {
     precioEstudiante * cantidadTicket;
 };
+
+console.log(precioEntEstu)
 
 function precioEnttrai (precioTrainee, cantidadTicket) {
     precioTrainee * cantidadTicket;
@@ -77,4 +78,3 @@ function calcular(operacion){
 }
 }
 
-console.log(resultado);

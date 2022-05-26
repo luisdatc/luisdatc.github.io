@@ -17,8 +17,18 @@
     text-align: center;
 }
 
-.card2 {
+.cards .card1{
+    border: 2px solid blue;
+    
+}
+
+.cards .card2{
+    border: 2px solid seagreen;
     margin: 0px 10px 0px 10px ;
+}
+
+.cards .card3{
+    border: 2px solid gold;
 }
 
 .valor {
@@ -27,4 +37,62 @@
 
 .boton .botones button{
     width: 100%;
+    background-color: rgba(10, 131, 36, 0.8);
+    border-color:rgba(10, 131, 36, 0.8);
 }
+
+.boton .botones button:hover{
+    width: 100%;
+    background-color: rgba(10, 131, 36, 1);   
+    border-color:rgba(10, 131, 36, 1);
+    color: #ced4da;
+    transition: 0.5s;
+}
+
+
+.navbar{
+    background-color: #495057;
+}
+
+.navbar .navbar-bar .nav .last{
+    color: #009349 !important;
+}
+
+.navbar .navbar-bar .nav .nav-link{
+    text-decoration: none;
+    color: #adb5bd;
+}
+
+.navbar-brand{
+    color: #e9ecef;
+}
+
+.navbar{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.footer {
+  background-image: linear-gradient(to right,rgb(25, 56, 92), rgba(9, 55, 70, 0.856));
+}
+
+.footer .container-footer {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .container-footer a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem 0;
+  width: 100px;
+  text-align: center;
+}
+
+.footer .container-footer a:hover {
+  color: var(--gray-500);
+}
+
