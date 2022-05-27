@@ -1,129 +1,60 @@
-//definir el precio por entrada
-const precio = 200;
-
-//definir precio de entradas por categoria
-const precioEstudiante = 40;
-const precioTrainee = 100;
-const precioJunior = 170;
-
-//funcion document.getElementById
 function get(id) {
     return document.getElementById(id);
 };
+ 
+function limpiar(){
+    (document.getElementById('entradas')).reset();
+};
 
-//capturar cantidad
-let cantidadTicket = get('cantidadTickets').value;
+const btnBorrar = document.getElementById('btnBorrar');
 
-console.log(cantidadTicket);
-
-function calcular(operacion) {
-//tomo el favol del input cantidadTikects
-const valorCantidad = cantidadTicket.value;
-
-let resultado;
-if(esValido(valorCantidad)){
-    
-    switch(operacion){
-        case 'estudiante':
-            resultado = precioEntEstu;
-            break;
-        case 'trainee':
-            resultado = precioEntTrai;
-            break;
-        case 'junior':
-            resultado = precioEntJun;
-            break;
-    }
-}
-actualizarResultado(resultado);
-}
-
-// verificar que la cantidad no sea nula 
-function esValido(cantidadTicket) {
-    return cantidadTicket !== '';
-}
-
-function precioEntEstu(valorCantidad, precioEstudiante) {
-    return valorCantidad * precioEstudiante;
-}
-
-function precioEntTrai(valorCantidad, precioTrainee) {
-    return valorCantidad * precioTrainee;
-}
-
-function precioEntJun(valorCantidad, precioJunior) {
-    return valorCantidad * precioJunior;
-}
-/*
-
-//funcion saber cantidad de entradas
-let totalTickets; 
-function saberCantidad (cantidadTicket) {
-    totalTickets = Number(cantidadTicket);
-    return totalTickets;
-}
-
-*/
-
-//realizar funcion que realice la multiplicacion de cantidad por categoria 
-
-
-
-
-
-//asociar al boton resumen el evento click
- btnResumen.addEventListener('click', function() {
-    calcular();
+btnBorrar.addEventListener('click', function(){
+    limpiar();
 });
 
-
-/*
-function calcular(totalTickets, descuento) {
-    const ValorA = Number(totalTickets);
-    const ValorB = Number(descuento);
-    return ValorA * ValorB;
-}
-*/
-/*
-get('resultados').innerHTML = calcular();
-*/
-
-//arrojar el total en el imput
-/*
-
-function actualizarResultado(suma) {
-    //capturo el div por su id
-    const div = document.getElementById('resultado');
-    div.className = 'resultado';
-    //actualizo el contenido del div con la variable suma
-    div.innerHTML = suma;
+function esValido(valor) {
+    return valor !== '';
 }
 
 
-function calcular(operacion){
+function calcular(){
+    let resultado; 
+    let precio = parseFloat(200);
+    let precioEstudiante = Number(40);
+    let precioTrainee = Number(100);
+    let precioJunior = Number(170);
+    let cantidad = get('cantidadTickets').value;
+    let cate = get('categoria').value;
 
-    const cantidadE = cantidad.value;
+    if(cantidad>0){
+        switch(cate){
+            case "estudiante":
+                resultado = parseInt(cantidad) * parseInt(precioEstudiante);
+                break;
+            case "trainee": 
+                resultado = parseInt(cantidad) * parseInt(precioTrainee);
+                break;
+            case "junior":
+                resultado = parseInt(cantidad) * parseInt(precioJunior);
+                break;
+            default:
+                resultado = parseInt(cantidad) * (precio);
 
-    let resultado;
-
-    switch(operacion){
-        case 'estudiante':
-            resultado = precioEstudiante(precio);
-            break;
-        case 'trainee':
-            resultado = precioTrainee(precio);
-            break;
-        case'junior':
-        resultado =precioJunior(precio);
-        break
+        }
+    }else {
+        resultado = 'Ingrese cantidad Correcta';
     }
     actualizar(resultado);
-}
+};
 
-function actualizar(resul){
-    const input = document.createElement('resultados');
-    input.className = 'resultados';
-    input.innerHTML = resul;
-}
-*/
+function actualizar(res){
+    const div = get('totalPagar');
+    div.className = 'totalPagar';
+    totalPagar.innerHTML = "Total a Pagar: $ " + res;
+};
+const btnResumen = get('btnResumen');
+
+btnResumen.addEventListener('click', calcular);
+
+
 

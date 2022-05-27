@@ -106,24 +106,22 @@
                     <div class="col-sm-6">
                         <label for="" class="form-label">Categoria</label>
                         <select class="form-select" id="categoria" name="categoia" aria-label="State">
-                            <option value="0"selected>Estudiante</option>
-                            <option value="1">Trainee</option>
-                            <option value="2">Junior</option>
+                            <option value="ninguna"selected>Seleccione una Categoria:</option>
+                            <option value="estudiante">Estudiante</option>
+                            <option value="trainee">Trainee</option>
+                            <option value="junior">Junior</option>
                         </select>
                     </div>
-
-                    <div class="form-floating">
-                        <input type="text" id="resultados" class="form-control"  placeholder="" >
-                        <label for="">Total a Pagar: $ <span id="pagar"></span></label>
+                    <div id="totalPagar">
+                        Total a Pagar: $
                     </div>
                 </div>
-
                 <div class="row g-2 mt-auto boton">
                     <div class="col-sm-6 sm-3 botones">
-                        <button type="submit" class="btn btn-primary" id="btnBorrar">Borrar</button>
+                        <button type="button" class="btn btn-primary" id="btnBorrar">Borrar</button>
                     </div>
                     <div class="col-sm-6 sm-3 botones">
-                        <button type="submit" class="btn btn-primary" id="btnResumen">Resumen</button>
+                        <button type="button" class="btn btn-primary" id="btnResumen">Resumen</button>
                     </div>
                 </div>
             </form>
@@ -145,5 +143,5 @@
     
 
 </body>
-<script src="scrip2.js"></script>
+<script src="script.js"></script>
 </html>
