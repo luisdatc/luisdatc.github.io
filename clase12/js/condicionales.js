@@ -1,33 +1,33 @@
 let estudio = true;
 
-// if 
-if(estudio) {
-    alert('vamos bien');
+//if
+if(!estudio) {
+    alert('vamos bien')
+    //logica si true
 }else {
-    alert('vamos mal');
+    //logica si false
+    alert('vamos mal')
 }
 
-let edad = 5;
+let edad = 1;
 
-if (edad ===1){
+if(edad ===1){
     alert('soy bebe');
-} else if (edad ===2){
+}else if(edad === 2) {
     alert('soy bebe de 2');
 }else {
-    alert('Niño');
+    alert('niño');
 }
 
-//switch
-
-edad= 5; 
-switch(edad){
-    case 1: 
+edad = 5;
+/*switch */
+switch(edad) {
+    case 1:
         alert('soy bebe');
         break;
     case 2: 
-        alert('soy bebe de 2');
+        alert('soy bebe 2' );
         break;
-    default: 
+    default :
         alert('niño');
 }
-
